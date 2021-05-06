@@ -1,5 +1,7 @@
 const express=require('express');
 const app=express();
+const port=process.env.PORT || 3000;
+
 app.set('view engine','ejs');
 app.use(express.urlencoded({extended:true}));
 
@@ -54,6 +56,6 @@ app.use("/api/pengguna",pengguna);
 app.use("/api/resep",resep);
 app.use("/api/aksesapi",aksesapi);
 
-app.listen(3000,function () {
+app.listen(port,function () {
    console.log("Listening on port 3000");
 });
