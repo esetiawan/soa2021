@@ -1,0 +1,17 @@
+<h1>List Menu</h1>
+<br/>
+<p><%= type %></p>
+<ol>
+    <% for(let i=0;i<menu.length;i++){%>
+    <li><%= menu[i] %></li>
+    <% } %>
+    <a href = "/api/aksesapi/rates">Display Rates</a>
+    <a href = "/api/aksesapi/film">Display Film</a>
+    <br/>
+    <form method="get" action="/api/aksesapi/usdtoidr" >
+        <input type="text" name="from"/>
+        <input type="text" name="to"/>
+        <input type="text" name="jumlah"/>
+        <input type="submit" value="Konversi"/>
+    </form>
+</ol>
